@@ -121,8 +121,8 @@
     @Html.Label("CNIC")
   
   <input type="text" data-minlenth="13" maxlength="13"   name="cnic"  placeholder="cnic"  required/>
-    @*<div id="result"></div>
-     @Scripts.Render("~/bundles/jquery")
+    <div id="result"></div>
+     @*@Scripts.Render("~/bundles/jquery")
                 <script>
 
 
@@ -153,7 +153,10 @@
                     });
 
                 </script>*@
-    
+    @Html.Label("Email")
+  
+  <input type="email" name="email" placeholder="email"  maxlength="40" required/>
+
     @Html.Label("Address")
   
   <input name="address" placeholder="address"  maxlength="40" required/>
@@ -169,11 +172,11 @@
     @{
         string s =(string)Session["std"];
     }
-    }
+    
     @if(s == "true")
     {
     <script  type='text/javascript'>
-        alert('Invalid Entry.Student ID or CNIC is already exist.');
+        alert('Invalid Entry.Student ID or CNIC or Email is already exist.');
        
     </script>
         Session["std"] = "false";

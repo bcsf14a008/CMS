@@ -34,9 +34,16 @@
     @Html.Label("CNIC")
   <input type="text" name="cnic" placeholder="cnic" data-minlength="13" maxlength="13"   required/>
    
+    
+
     @Html.Label("Address")
 
   <input name="address" placeholder="address"  maxlength="50" required/>
+
+     @Html.Label("Email")
+  <input type="email" name="email" placeholder="email" data-minlength="40" maxlength="40"   required/>
+   
+
     
     @Html.Label("Phone No")
 
@@ -49,11 +56,11 @@
     @{
         string s =(string)Session["status1"];
     }
-    }
+    
     @if(s == "true1")
     {
     <script  type='text/javascript'>
-        alert('Invalid Entry.Teacher ID or CNIC is already exist.');
+        alert('Invalid Entry.Teacher ID or CNIC or Email is already exist.');
 
     </script>
         Session["status1"] = "false";
